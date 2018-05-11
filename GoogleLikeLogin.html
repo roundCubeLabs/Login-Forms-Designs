@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Google Like Login by roundCube</title>
+<style>
+#container{
+position:absolute;
+top:0px;
+left:0px;
+height:100%;
+width:100%;
+background-image:url(http://img12.deviantart.net/efc4/i/2013/310/a/8/google_plus_default_header_background_2_by_rohynrajesh-d6t8dzz.jpg);
+background-size:100% 100%;
+
+}
+#loginWindow{
+position:absolute;
+top:23%;
+left:37%;
+height:370px;
+width:330px;
+background-color:white;
+-moz-box-shadow:0px 3px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow:0px 3px 0px rgba(0,0,0,0.3);
+box-shadow:0px 3px 0px rgba(0,0,0,0.3);
+
+
+}
+
+#loginImage{
+position:absolute;
+top:16%;
+left:35%;
+height:96px;
+width:96px;
+background-color:white;
+border-radius:50%;
+background-image:url(https://cdn0.vox-cdn.com/images/verge/default-avatar.v9899025.gif);
+background-size:100% 100%;
+border-style::none;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease 0s;
+
+}
+
+#emailBox{
+position:absolute;
+top:53%;
+left:5%;
+height:100px;
+width:295px;
+  -webkit-transition:all 0.2s ease;
+  -moz-transition:all 0.2s ease 0s;
+
+
+}
+
+#emailButton{
+position:absolute;
+top:49%;
+left:0%;
+height:35px;
+width:295px;
+background-color:#4a8bf4;
+color:white;
+text-align:center;
+border-radius:3px;
+line-height:35px;
+cursor:pointer;
+cursor:hand;
+
+
+
+}
+
+#passwordBox{
+position:absolute;
+top:53%;
+left:5%;
+height:100px;
+width:295px;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease 0s;
+
+opacity:0;
+display:none;
+
+}
+
+#backButton{
+position:absolute;
+top:7%;
+left:2%;
+height:40px;
+width:40px;
+opacity:0;
+display:none;
+background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ic_arrow_back_36px.svg/1000px-Ic_arrow_back_36px.svg.png);
+background-size:100% 100%;
+cursor:pointer;
+cursor:hand;
+
+
+}
+
+#copyright{
+position:absolute;
+bottom:1%;
+right:1%;
+color:black;
+font-size:10px;
+
+}
+
+a{
+text-decoration:none;
+color:black;
+}
+
+
+
+</style>
+
+<script>
+
+  function emailhide(){
+  
+  var email = document.getElementById("emailBox");
+  var image = document.getElementById("loginImage");
+  var pass = document.getElementById("passwordBox");
+  var back = document.getElementById("backButton");
+  
+  email.style.opacity="0";
+  email.style.display="none";
+  pass.style.opacity="1";
+  pass.style.display="block";
+  back.style.opacity="1";
+  back.style.display="block";
+  image.style.top="16%";
+  image.style.backgroundImage="url(http://4.bp.blogspot.com/-F2zSbkvkYfc/VaAPg-OWzVI/AAAAAAAABU4/Ixcnw_K1Ywk/s1600/roundCube.png)";
+  }
+
+  function backToLogin(){
+  
+   var email = document.getElementById("emailBox");
+  var image = document.getElementById("loginImage");
+  var pass = document.getElementById("passwordBox");
+  var back = document.getElementById("backButton");
+  
+  email.style.opacity="1";
+  email.style.display="block";
+  pass.style.opacity="0";
+  pass.style.display="none";
+  back.style.opacity="0";
+  back.style.display="none";
+  image.style.top="15%";
+  image.style.backgroundImage="url(https://cdn0.vox-cdn.com/images/verge/default-avatar.v9899025.gif)";
+  
+  
+  
+  }
+  
+
+
+</script>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="loginWindow">
+		<a href="https://www.facebook.com/roundCubeInc?fref=ts"><div id="loginImage"></div></a>
+		<form>
+		<div id="emailBox">
+			<input name="email" type="email" placeholder=" Enter your email " style="width:292px;height:33px;"/>
+			<div id="emailButton" onclick="emailhide()">Next</div>
+		</div>
+		<div id="passwordBox">
+			<input type="password" name="password" placeholder=" Password" style="width:292px;height:33px;"><br/><br/>
+			<input name="submitted" type="submit" value="Submit" class="formButton" style="width:292px;height:33px;text-align:center;color:white;background-color:#4a8bf4;border-radius:3px;border-style:none;"/>
+		</div>
+		<div id="backButton" onclick="backToLogin()"></div>
+		</form>
+	
+		<div id="copyright"><a href="https://www.facebook.com/roundCubeInc?fref=ts">roundCube</a></div>
+	</div>
+
+</div>
+
+
+</body>
+
+</html>

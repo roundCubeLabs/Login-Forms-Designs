@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login V3.0 By roundCube</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="background">
+		<div id="contactForm">
+			<div id="header">
+				<h2><b>Sign in</b></h2>
+			</div>
+			<div id="form">
+				<form role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" placeholder="Username or Email">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="pwd" placeholder="User Password">
+					</div>
+					<button type="submit" class="btn btn-success btn-block"><b>Login</b></button>
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</form>
+				<div id="fbButton">
+					<button type="fb" class="btn btn-default btn-block"><b>Login with Facebook</b></button>
+				</div>
+				<div id="twitterButton">
+					<button type="twitter" class="btn btn-default btn-block"><b>Login with Twitter</b></button>
+				</div>
+			</div>
+			<div id="footer">
+				<p class="newAcc">Need new account?</p>
+				<div id="signUpButton">
+					<button type="newAcc" class="btn btn-success "><b>Signup</b></button>
+				</div>
+			</div>
+			<div id="copyright"><a href="https://www.facebook.com/roundCubeInc?fref=ts">&#169; roundCube</a></div>
+		</div>
+			<a href="http://roundcubee.blogspot.com/2015/07/fully-responsive-login-form-v30-based.html"><div id="getTheCode"><h2>Click here to get the code</h2></div></a>
+
+	</div>
+</body>
+
+<style>
+#background{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+background-color:rgb(41,64,114);
+
+}
+
+#contactForm{
+position:absolute;
+top:10%;
+left:35%;
+width:30%;
+height:450px;
+background-color:rgb(28,43,74);
+
+
+}
+
+#header{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:60px;
+background-color:rgb(23,35,59);
+color:white;
+text-align:center;
+
+}
+
+#form{
+position:absolute;
+top:100px;
+left:7%;
+width:86%;
+height:400px;
+color:white;
+
+
+}
+
+.btn-success{
+border-bottom-color:rgb(0,153,51);
+border-bottom-width:4px;
+background-color:rgb(0,204,102);
+border-radius:3px;
+}
+.btn-success:hover{
+background-color:rgb(0,170,85);
+
+
+}
+
+
+.form-group input[type="text"] {
+        border: none;
+        background-color: rgb(18,25,44);
+}
+
+.form-group input[type="password"] {
+        border: none;
+        background-color: rgb(18,25,44);
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+#fbButton{
+position:absolute;
+top:52%;
+left:0%;
+width:48%;
+height:10%;
+
+
+}
+
+#twitterButton{
+position:absolute;
+top:52%;
+right:0%;
+width:48%;
+height:10%;
+
+
+}
+
+#fbButton .btn-default{
+background-color:rgb(59,90,154);
+border-bottom-color:rgb(0,51,102);
+border-top-style:none;
+border-left-style:none;
+border-right-style:none;
+color:white;
+border-width:3px;
+
+}
+
+#fbButton .btn-default:hover{
+background-color:rgb(51,78,134);
+
+
+}
+
+
+#twitterButton .btn-default{
+background-color:rgb(44,168,210);
+border-bottom-color:rgb(51,153,204);
+border-top-style:none;
+border-left-style:none;
+border-right-style:none;
+color:white;
+border-width:3px;
+
+}
+
+#twitterButton .btn-default:hover{
+background-color:rgb(35,136,169);
+
+
+}
+
+#footer{
+position:absolute;
+left:0px;
+bottom:0px;
+height:50px;
+width:100%;
+background-color:rgb(23,35,59);
+color:white;
+
+
+}
+
+.newAcc{
+line-height:48px;
+-webkit-margin-start:20px;
+
+}
+
+#signUpButton{
+position:absolute;
+right:3%;
+width:19%;
+top:14%;
+height:90%;
+
+
+}
+
+#copyright{
+position:absolute;
+top:1%;
+right:1%;
+color:white;
+width:98%;
+text-align:center;
+opacity:0.3;
+
+}
+#copyright a{
+color:white;
+text-decoration:none;
+
+}
+
+#copyright:hover{
+opacity:1;
+}
+
+#getTheCode{
+position:fixed;
+bottom:0px;
+left:0px;
+width:100%;
+height:80px;
+background-color:black;
+opacity:0.7;
+text-align:center;
+color:white;
+
+}
+
+
+@media only screen and (max-width:1291px)
+{
+#fbButton{
+width:50%;
+
+}
+#twitterButton{
+width:50%;
+
+}
+}
+
+@media only screen and (max-width:1225px)
+{
+#contactForm{
+width:35%;
+left:32.5%;
+
+}
+
+#fbButton{
+width:49%;
+
+}
+#twitterButton{
+width:49%;
+
+}
+}
+
+@media only screen and (max-width:1071px)
+{
+#contactForm{
+width:40%;
+left:30%;
+
+}
+}
+
+@media only screen and (max-width:936px)
+{
+#contactForm{
+width:45%;
+left:27.5%;
+
+}
+
+
+}
+
+@media only screen and (max-width:834px)
+{
+#contactForm{
+width:50%;
+left:25%;
+
+}
+
+
+}
+
+@media only screen and (max-width:748px)
+{
+#contactForm{
+width:55%;
+left:22.5%;
+
+}
+
+
+}
+
+
+@media only screen and (max-width:678px)
+{
+#contactForm{
+width:60%;
+left:20%;
+
+}
+
+}
+
+
+@media only screen and (max-width:628px)
+{
+#contactForm{
+width:65%;
+left:17.5%;
+
+}
+
+}
+
+@media only screen and (max-width:571px)
+{
+#contactForm{
+width:70%;
+left:15%;
+
+}
+
+}
+
+@media only screen and (max-width:534px)
+{
+#contactForm{
+width:75%;
+left:12.5%;
+
+}
+
+}
+
+@media only screen and (max-width:503px)
+{
+#contactForm{
+width:80%;
+left:10%;
+
+}
+
+}
+
+@media only screen and (max-width:468px)
+{
+#contactForm{
+width:85%;
+left:7.5%;
+
+}
+
+}
+
+@media only screen and (max-width:436px)
+{
+#contactForm{
+width:90%;
+left:5%;
+
+}
+
+}
+
+@media only screen and (max-width:412px)
+{
+#fbButton{
+left:-3%;
+width:52%;
+}
+#twitterButton{
+right:-3%;
+width:52%;
+}
+
+}
+
+
+@media only screen and (max-width:390px)
+{
+#fbButton{
+left:10%;
+width:80%;
+}
+#twitterButton{
+right:10%;
+width:80%;
+top:62%;
+}
+#signUpButton{
+width:30%;
+}
+
+}
+</style>
+
+</html>

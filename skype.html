@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skype Like Login By roundCube</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="background">
+		<div id="container-fluid">
+			<div id="loginForm">
+				<div id="logo"></div>
+				<div id="contactForm">
+					<form role="form">
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder=" email address">
+						</div>
+						</br>
+						<div class="form-group">
+							<input type="password" class="form-control" id="pwd" placeholder=" password">
+						</div>
+						<button type="submit" class="btn btn-info btn-lg">sign in </button>
+					</form>
+					<div id="newAcc">Create a new account</div>
+				</div>
+				<div id="socialButtons">
+					<a href="https://www.facebook.com/roundCubeInc?fref=ts"><div id="fb"></div></a>
+					<a href="https://www.twitter.com/iezzUsama"><div id="twitter"></div></a>
+				</div>
+				<div id="copyright">
+					<a href="https://www.facebook.com/roundCubeInc?fref=ts"><p>&#169; roundCube</p></a>
+				</div>
+				<div id="upperbar">
+					<p id="loginText" style="line-height:2.5;-webkit-margin-start:20px;opacity:0.7;"><b>Login</b></p>
+					<div id="close" onclick="closer()"></div>
+					<div id="minimize" onclick="minimize()"></div>
+				</div>
+			</div>
+			<a href="http://roundcubee.blogspot.com/2015/07/fully-responsive-skype-like-login.html"><div id="getTheCode"><h2>Click here to get the code</h2></div></a>
+		</div>
+	</div>
+</body>
+
+<style>
+#background{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+background-image:url(http://www.wallpapersfolder.com/user-content/uploads/wall/o/2013/10/big-tree-on-the-meadow.jpg);
+background-color:yellow;
+background-size:100% 100%;
+
+}
+
+#loginForm{
+position:absolute;
+top:10%;
+left:36%;
+width:28%;
+height:80%;
+background-color:white;
+
+  -webkit-transition:all 0.7s ease;
+  -moz-transition:all 0.7s ease 0s;
+
+}
+#logo{
+position:absolute;
+top:8%;
+height:30%;
+left:5%;
+width:90%;
+background-image:url(https://skypeblogs.files.wordpress.com/2013/09/skype-logo-feb_2012_rgb_500.png);
+background-size:100% 100%;
+
+  -webkit-transition:all 0.25s ease;
+  -moz-transition:all 0.25s ease 0s;
+
+}
+
+#contactForm{
+position:absolute;
+top:45%;
+left:10%;
+width:80%;
+height:45%;
+
+  -webkit-transition:all 0.25s ease;
+  -moz-transition:all 0.25s ease 0s;
+
+}
+
+.btn{
+border-radius:13px;
+right:0px;
+
+}
+
+.form-control{
+border:1px solid lightblue;
+border-radius:0px;
+border-left-color:lightblue;
+}
+
+#newAcc{
+position:absolute;
+bottom:36%;
+height:10%;
+right:-2%;
+width:56%;
+background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/155px-Plus_in_circle.svg.png");
+background-size:14% 100%;
+background-repeat:no-repeat;
+text-align:right;
+opacity:0.7;
+cursor:pointer;
+cursor:hand;
+
+
+
+}
+
+#newAcc:hover{
+opacity:1;
+
+}
+#socialButtons{
+position:absolute;
+bottom:5%;
+width:50%;
+left:25%;
+height:8%;
+
+  -webkit-transition:all 0.25s ease;
+  -moz-transition:all 0.25s ease 0s;
+
+}
+
+#fb{
+position:absolute;
+bottom:0%;
+width:35px;
+left:25%;
+height:35px;
+background-image:url(http://i781.photobucket.com/albums/yy99/ashleyryan85/1388396429_facebook_zps316d20b8.png);
+background-size:100% 100%;
+opacity:0.6;
+cursor:pointer;
+cursor:hand;
+
+}
+
+#fb:hover{
+opacity:1;
+
+}
+
+#twitter{
+position:absolute;
+bottom:0%;
+width:35px;
+right:25%;
+height:35px;
+background-image:url(http://www.yogarecords.com/logos/icon-twitter.png);
+background-size:100% 100%;
+opacity:0.6;
+cursor:pointer;
+cursor:hand;
+
+}
+
+#twitter:hover{
+opacity:1;
+
+}
+
+#copyright{
+position:absolute;
+bottom:0px;
+left:0px;
+width:100%;
+height:21px;
+text-align:center;
+
+  -webkit-transition:all 0.25s ease;
+  -moz-transition:all 0.25s ease 0s;
+}
+
+#copyright a{
+text-decoration:none;
+color:black;
+}
+
+#upperbar{
+position:absolute;
+top:0px;
+left:0px;
+height:40px;
+width:100%;
+z-index:20;
+background-color:#e1e1e1;
+}
+
+#close{
+position:absolute;
+top:5px;
+right:4px;
+height:20px;
+width:20px;
+background-image:url(http://www.leadacity.net/webroot/images/global/icons/icon-nav-close.png);
+background-size:100% 100%;
+opacity:0.4;
+}
+
+#minimize{
+position:absolute;
+top:9px;
+right:27px;
+height:20px;
+width:20px;
+background-image:url(http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/rounded-glossy-black-icons-symbols-shapes/020739-rounded-glossy-black-icon-symbols-shapes-minimize.png);
+background-size:100% 100%;
+opacity:0.4;
+
+}
+
+#close:hover,#minimize:hover{
+opacity:0.7;
+cursor:pointer;
+cursor:hand;
+
+
+}
+
+#getTheCode{
+position:fixed;
+bottom:0px;
+left:0px;
+width:100%;
+height:80px;
+background-color:black;
+opacity:0.7;
+text-align:center;
+color:white;
+
+}
+
+@media only screen and (max-width:1335px)
+{
+#newAcc{
+width:60%;
+
+}
+
+}
+
+@media only screen and (max-width:1126px)
+{
+#newAcc{
+font-size:13px;
+
+}
+
+}
+
+@media only screen and (max-width:1085px)
+{
+#newAcc{
+bottom:16%;
+width:64%;
+background-size:15% 100%;
+line-height:2;
+
+}
+
+}
+
+@media only screen and (max-width:1023px)
+{
+#loginForm{
+width:35%;
+left:32.5%;
+
+}
+#newAcc{
+bottom:35%;
+}
+
+}
+
+@media only screen and (max-width:850px)
+{
+#loginForm{
+width:40%;
+left:30%;
+
+}
+
+}
+
+@media only screen and (max-width:720px)
+{
+#loginForm{
+width:45%;
+left:27.5%;
+
+}
+
+}
+
+@media only screen and (max-width:658px)
+{
+#loginForm{
+width:50%;
+left:25%;
+
+}
+#newAcc{
+bottom:30%;
+}
+}
+
+@media only screen and (max-width:578px)
+{
+#loginForm{
+width:60%;
+left:20%;
+
+}
+#newAcc{
+bottom:20%;
+}
+
+}
+
+
+@media only screen and (max-width:487px)
+{
+#loginForm{
+width:70%;
+left:15%;
+
+}
+#newAcc{
+opacity:0;
+}
+
+}
+
+@media only screen and (max-width:410px)
+{
+#loginForm{
+width:80%;
+left:10%;
+
+
+}
+}
+
+@media only screen and (max-width:361px)
+{
+#fb{
+left:10%;
+
+}
+#twitter{
+right:10%;
+}
+}
+
+</style>
+
+<script>
+function minimize(){
+var logform = document.getElementById("loginForm");
+var logo = document.getElementById("logo");
+var cform = document.getElementById("contactForm");
+var social=document.getElementById("socialButtons");
+var developer=document.getElementById("copyright");
+
+if(logform.style.height!="40px")
+{
+	logform.style.height="40px";
+	logform.style.top="0px";
+	logo.style.opacity="0";
+	cform.style.display="none";
+	cform.style.opacity="0";
+	social.style.display="none";
+	social.style.opacity="0";
+	developer.style.display="none";
+	developer.style.opacity="0";
+}
+else
+{
+	logform.style.height="80%";
+	logform.style.top="10%";
+	logo.style.opacity="1";
+	cform.style.display="block";
+	cform.style.opacity="1";
+	social.style.display="block";
+	social.style.opacity="1";
+	developer.style.display="block";
+	developer.style.opacity="1";
+
+
+}
+
+}
+
+function closer(){
+var loginform = document.getElementById("loginForm");
+loginform.style.opacity="0";
+loginform.style.display="none";
+}
+
+</script>
+</html>
